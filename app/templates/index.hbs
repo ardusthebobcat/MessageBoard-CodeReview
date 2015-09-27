@@ -1,8 +1,8 @@
 <p>Index page template</p>
 
 <ul>
-  {{#each model as |question|}}
-    {{question-tile question=question deleteQuestion="deleteQuestion"}}
+  {{#each model.questions as |question|}}
+    {{question-tile question=question destroyQuestion="destroyQuestion"}}
   {{/each}}
 </ul>
 
