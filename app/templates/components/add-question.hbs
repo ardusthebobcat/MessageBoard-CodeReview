@@ -1,0 +1,14 @@
+{{#if addForm}}
+  <form>
+    {{input value=question id="question" placeholder="Your question"}}
+
+    {{input value=author id="author" placeholder="Your name"}}
+
+    {{input value=additionalNotes id="additionalNotes" placeholder="Additional Notes"}}
+
+  </form>
+
+  <button {{action 'save'}}>Save</button>
+{{else}}
+  <button {{action 'showAddAQuestion'}}>Add a Question</button>
+{{/if}}
