@@ -1,8 +1,14 @@
 <p>Index page template</p>
 
 <ul>
-  {{#each model as |question|}}
-    {{question-tile question=question deleteQuestion="deleteQuestion"}}
+  {{#each model.questions as |question|}}
+    {{#link-to 'question' question.id}}{{question-tile question=question deleteQuestion="deleteQuestion"}} {{/link-to}}
+  {{/each}}
+</ul>
+
+<ul>
+  {{#each model.answers as |answer|}}
+    <li>{{answer.answer}}<br> -{{answer.author}}</li>
   {{/each}}
 </ul>
 
