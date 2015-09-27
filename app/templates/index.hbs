@@ -2,8 +2,10 @@
 
 <ul>
   {{#each model as |question|}}
-    <li>{{question.question}}<br> -{{question.author}}</li>
+    {{question-tile question=question deleteQuestion="deleteQuestion"}}
   {{/each}}
 </ul>
+
+{{add-question save="save"}}
 
 <p>End of index page template</p>
