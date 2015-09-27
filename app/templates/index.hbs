@@ -1,0 +1,9 @@
+<p>Index page template</p>
+
+<ul>
+  {{#each model as |question|}}
+    <li>{{question.question}}<br> -{{question.author}}</li>
+  {{/each}}
+</ul>
+
+<p>End of index page template</p>

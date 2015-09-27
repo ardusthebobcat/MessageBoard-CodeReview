@@ -1,3 +1,14 @@
-<h2 id="title">Welcome to Ember</h2>
+<div class="banner">
+  <h1> Welcome to the banner.</h1>
+<hr>
+</div>
 
-{{outlet}}
+<div class="page-template">
+  Some stuff in the body <br>
+  {{outlet}}
+  End of the body
+</div>
+<div class="footer">
+  <hr>
+  <p>Welcome to the footer. {{#link-to 'index'}}Home{{/link-to}}</p>
+</div>
