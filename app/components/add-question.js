@@ -12,6 +12,7 @@ export default Ember.Component.extend({
         author: this.get('author'),
         question: this.get('question'),
         additionalNotes: this.get('additionalNotes'),
+        answers: this.get('answers')
       };
       this.set('addForm', false);
       this.sendAction('save', params);

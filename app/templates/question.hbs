@@ -1,7 +1,13 @@
 <p> Question Page: <br>
-  {{model.question}} <br>
-  --{{model.author}}<br>
-  Notes: {{model.additionalNotes}} <br></p>
+  {{model.question.question}} <br>
+  --{{model.question.author}}<br>
+  Notes: {{model.question.additionalNotes}} <br></p>
 
-  {{answer-tile answer=answer}}
-{{outlet}}
+Answers:
+Answer - Author <br>
+{{#each model.answers as |answer|}}
+  <b>{{answer.answer}}</b><br>
+  -{{answer.author}}<br>
+{{/each}}
+
+{{answer-tile answer=answer addAnAnswer="saveAnswer"}}
